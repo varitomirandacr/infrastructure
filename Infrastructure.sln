@@ -3,7 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29418.71
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{8BEFD909-8176-4A20-943F-AA604DB2AA1D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{8BEFD909-8176-4A20-943F-AA604DB2AA1D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{0C8CA22C-CAFA-4870-ABB8-AA0484B81BCA}"
+	ProjectSection(SolutionItems) = preProject
+		build.ps1 = build.ps1
+		functions.ps1 = functions.ps1
+		tasks.ps1 = tasks.ps1
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HangfireMongo", "HangfireMongo\HangfireMongo.csproj", "{25B6982B-7580-461C-909B-F85EBA72588C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfrastructureTest", "InfrastructureTest\InfrastructureTest.csproj", "{0C407314-A28C-405E-BA9F-F9E44739AF56}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +26,14 @@ Global
 		{8BEFD909-8176-4A20-943F-AA604DB2AA1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BEFD909-8176-4A20-943F-AA604DB2AA1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BEFD909-8176-4A20-943F-AA604DB2AA1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25B6982B-7580-461C-909B-F85EBA72588C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25B6982B-7580-461C-909B-F85EBA72588C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25B6982B-7580-461C-909B-F85EBA72588C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25B6982B-7580-461C-909B-F85EBA72588C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C407314-A28C-405E-BA9F-F9E44739AF56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C407314-A28C-405E-BA9F-F9E44739AF56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C407314-A28C-405E-BA9F-F9E44739AF56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C407314-A28C-405E-BA9F-F9E44739AF56}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

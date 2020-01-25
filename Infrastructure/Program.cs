@@ -5,6 +5,7 @@ using Infrastructure.Creational.Singleton;
 using Infrastructure.Structural;
 using Infrastructure.Structural.Adapter;
 using Infrastructure.Structural.Bridge;
+using Infrastructure.Structural.Composite;
 using System;
 
 namespace Infrastructure
@@ -21,7 +22,8 @@ namespace Infrastructure
 
             // Structural
             // ApplyAdapter.Apply();
-            ApplyBridge.Apply();
+            // ApplyBridge.Apply();
+            ApplyComposite.Apply();
         }
     }
 
@@ -270,6 +272,43 @@ incompatible interfaces";
 different abstract/interface type
 - Adapter lets classes work together that couldn't otherwise because of 
 incompatible interfaces";
+
+            return toString;
+        }
+    }
+
+    public class ApplyComposite
+    {
+        public static void Apply()
+        {
+            Console.WriteLine("Applying Composite Pattern");
+            Console.WriteLine("");
+
+            var composite = new Composite<IChild>();
+            composite.Elements.Add(new Structural.Composite.ChildOne());
+            composite.Elements.Add(new Structural.Composite.ChildTwo());
+
+            var three = new ChildThree();
+            composite.Elements.Add(three);
+            composite.Display();
+
+            Console.WriteLine("");
+            Console.WriteLine("////////////////////////////////////");
+
+            composite.Elements.Remove(three);
+            composite.Display();
+
+            Console.WriteLine("");
+
+
+            Console.ReadKey();
+        }
+
+        public static new string ToString()
+        {
+            string toString = @"
+////////////////////////////////////////////////////////////////////////////////////////////
+- Graphical tree structure made up of primitive nodes";
 
             return toString;
         }
